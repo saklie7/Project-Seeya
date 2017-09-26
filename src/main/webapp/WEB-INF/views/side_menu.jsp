@@ -193,7 +193,7 @@
 						<li><a href="#"><i class="fa fa-angle-double-right"></i>
 								Join </a></li>
 					</ul></li>
-				<li><a href="boards"><i class="fa-fw fa fa-reorder"></i>
+				<li><a href="/boards"><i class="fa-fw fa fa-reorder"></i>
 						Boards</a></li>
 				<li><a href="sugerencias"><i
 						class="fa fa-fw fa-paper-plane-o"></i> MENU 4</a></li>

@@ -12,12 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.seeya.login.model.Login;
 import com.seeya.login.service.LoginService;
 import com.seeya.member.model.Member;
+import com.seeya.member.repository.MemberMapper;
 
 @Controller
 public class LoginController {
 
 	@Autowired
 	private LoginService loginService;
+	
+	@Autowired
+	private MemberMapper memberMapper;
 	
 	@RequestMapping("/login")
 	public String getLoginView() {
@@ -34,7 +38,7 @@ public class LoginController {
 			model.addAttribute("login", login);
 			return "redirect:/boards";
 		} else {
-			Member member = new Member(login.getMemberid(), login.getPassword(), null);
+			Member member = memberMapper.selectByMemberId(login.getMemberid());
 			session.setAttribute("member", member);
 			return "redirect:/boards";
 		}

@@ -43,7 +43,7 @@
 					<c:forEach items="#{boards }" var="board">
 						<tr>
 							<td>${board.bno }</td>
-							<td><a href="<c:url value='/boards/view'/>">${board.title }</a></td>
+							<td><a href="view/${board.bno}">${board.title }</a></td>
 							<td>${board.writer }</td>
 							<td><fmt:formatDate pattern="MM-dd hh:mm"
 									value="${board.regDate }" /></td>
@@ -52,8 +52,10 @@
 					</c:forEach>
 				</tbody>
 			</table>
-			<a href="/">Home</a>
-			<a href="write">Write</a>
+			<a href="/" class="btn btn-primary">Home</a>
+			<c:if test="${not empty member }">
+				<a href="write" class="btn btn-primary">Write</a>
+			</c:if>
 		</div>
 	</div>
 </body>

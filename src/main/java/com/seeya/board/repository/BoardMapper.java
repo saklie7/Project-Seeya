@@ -18,10 +18,13 @@ public interface BoardMapper {
 	@Insert("INSERT INTO BOARD(WRITER,TITLE,CONTENT) VALUES(#{writer}, #{title}, #{content})")
 	public int insertBoard(Board board);
 	
-	@Select("select board where bno=#{bno}")
-	public int selectByBno(long bno);
+	@Select("select * from board where bno=#{bno}")
+	public Board selectByBno(long bno);
 	
-	@Update("UPDATE board SET hitCnt=hitCnt+1 WHERE bno=#{bno}")
+	@Update("update board set title=#{title}, content=#{content}, reg_date=sysdate where bno=#{bno}")
+	public int updateBoard(Board board);
+	
+	@Update("UPDATE board SET hit_cnt=hit_cnt+1 WHERE bno=#{bno}")
 	public int incrementCnt(long bno);
 	
 }

@@ -23,7 +23,8 @@ public class ProjectSeeyaApplication extends WebMvcConfigurerAdapter{
 		registry.addInterceptor(loginInterceptor)
 		.addPathPatterns("boards/write/**")
 		.addPathPatterns("boards/update/**")
-		.addPathPatterns("boards/delete/**");
+		.addPathPatterns("boards/delete/**")
+		.addPathPatterns("boards/view/**");
 	}
 	
 }
