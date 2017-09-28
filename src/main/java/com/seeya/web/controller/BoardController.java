@@ -76,8 +76,8 @@ public class BoardController {
 
 	@PostMapping("update")
 	public String postBoardUpdate(Board board) {
-		System.out.println("Board update called.");
-		System.out.println(board);
+		String rootPath = System.getProperty("catalina.home");
+		System.out.println(rootPath);
 		boardMapper.updateBoard(board);
 		return "redirect:/boards";
 	}

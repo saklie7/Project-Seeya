@@ -12,4 +12,6 @@ public class Member {
 	private String memberid;
 	private String password;
 	private String membername;
+	private String comment;
+	private String profilePic;
 }

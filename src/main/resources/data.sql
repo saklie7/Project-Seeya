@@ -1,6 +1,6 @@
-INSERT INTO member VALUES('aa11','aa','AA11');
-INSERT INTO member VALUES('bb11','bb','AA11');
-INSERT INTO member VALUES('cc11','cc','AA11');
+INSERT INTO member(memberid, password, membername) VALUES('aa11','aa','AA11');
+INSERT INTO member(memberid, password, membername) VALUES('bb11','bb','AA11');
+INSERT INTO member(memberid, password, membername) VALUES('cc11','cc','AA11');
 
 INSERT INTO BOARD(WRITER,TITLE,CONTENT) VALUES('W1', 'T1', 'C1');
 INSERT INTO BOARD(WRITER,TITLE,CONTENT) VALUES('W2', 'T2', 'C2');

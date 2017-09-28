@@ -163,9 +163,10 @@
 					class="fa fa-bar-chart-o"></i> </a></li>
 			<c:if test="${not empty member }">
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">${member.memberid }<b class="fa fa-angle-down"></b></a>
+					data-toggle="dropdown">${member.memberid }<b
+						class="fa fa-angle-down"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><i class="fa fa-fw fa-user"></i> Edit
+						<li><a href="member"><i class="fa fa-fw fa-user"></i>
 								Profile</a></li>
 						<li><a href="#"><i class="fa fa-fw fa-cog"></i> Change
 								Password</a></li>
@@ -183,15 +184,15 @@
 						class="fa fa-fw fa-angle-down pull-right"></i></a>
 					<ul id="submenu-1" class="collapse">
 						<c:if test="${empty member }">
-						<li><a href="/login"><i class="fa fa-angle-double-right"></i>
-								Login</a></li>
+							<li><a href="/login"><i class="fa fa-angle-double-right"></i>
+									Login</a></li>
+							<li><a href="member/join"><i class="fa fa-angle-double-right"></i>
+									Join </a></li>
 						</c:if>
 						<c:if test="${not empty member }">
-						<li><a href="/logout"><i class="fa fa-angle-double-right"></i>
-								Logout</a></li>
+							<li><a href="/logout"><i
+									class="fa fa-angle-double-right"></i> Logout</a></li>
 						</c:if>
-						<li><a href="#"><i class="fa fa-angle-double-right"></i>
-								Join </a></li>
 					</ul></li>
 				<li><a href="/boards"><i class="fa-fw fa fa-reorder"></i>
 						Boards</a></li>

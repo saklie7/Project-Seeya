@@ -19,7 +19,7 @@ public interface MemberMapper {
 	@Insert("insert into member values (#{memberid}, #{password}, #{membername})")
 	public int insert(Member member);
 
-	@Update("update member set password=#{password}, membername=#{membername} where memberid=#{memberid}")
+	@Update("update member set password=#{password}, membername=#{membername}, comment=#{comment} where memberid=#{memberid}")
 	public int update(Member member);
 
 	@Delete("delete from member where memberid=#{memberid}")
