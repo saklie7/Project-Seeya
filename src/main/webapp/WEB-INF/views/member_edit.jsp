@@ -32,7 +32,7 @@
 								<div class="col-sm-6">
 									<div align="center">
 										<img alt="User Pic"
-											src="${member.profilePic }"
+											src="${member.memberPic }"
 											id="profile-image1" class="img-circle img-responsive">
 										<input id="profile-image-upload file-upload" type="file"
 											accept="images/*">
@@ -48,7 +48,7 @@
 								<div class="col-sm-6">
 									<h4 style="color: #00b1b1;">Comment</h4>
 									<span> <textarea rows="" cols=""
-											style="margin: 0px; width: 278px; height: 222px;" name="comment" value="${member.comment }"></textarea>
+											style="margin: 0px; width: 278px; height: 222px;" name="comment">${member.comment }</textarea>
 									</span>
 								</div>
 								<div class="clearfix"></div>

@@ -186,7 +186,7 @@
 						<c:if test="${empty member }">
 							<li><a href="/login"><i class="fa fa-angle-double-right"></i>
 									Login</a></li>
-							<li><a href="member/join"><i class="fa fa-angle-double-right"></i>
+							<li><a href="/join"><i class="fa fa-angle-double-right"></i>
 									Join </a></li>
 						</c:if>
 						<c:if test="${not empty member }">

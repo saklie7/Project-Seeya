@@ -30,15 +30,16 @@ public class LoginController {
 
 	@PostMapping("/login")
 	public String getMemberLogin(Login login, Model model, HttpSession session) {
-		System.out.println(login);
 		loginService.checkMemeberLogin(login);
 		
 		if(login.getError() != null) {
+			System.out.println(login);
 			model.addAttribute("error", login.getError());
 			model.addAttribute("login", login);
-			return "redirect:/boards";
+			return "login";
 		} else {
 			Member member = memberMapper.selectByMemberId(login.getMemberid());
+			System.out.println(member);
 			session.setAttribute("member", member);
 			return "redirect:/boards";
 		}

@@ -30,7 +30,7 @@
 							<div class="col-sm-6">
 								<div align="center">
 									<img alt="User Pic"
-										src="${member.profilePic }"
+										src="${member.memberPic }"
 										id="profile-image1" class="img-circle img-responsive"> <input
 										id="profile-image-upload" class="hidden" type="file">
 									<div style="color: #999;">click here to change profile

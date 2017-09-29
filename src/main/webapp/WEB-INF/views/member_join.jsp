@@ -17,7 +17,78 @@
 <body>
 	<c:import url="side_menu.jsp"></c:import>
 	<div class="container">
-		<h1>member_join.jsp</h1>
+		<form action="join" method="post" enctype="multipart/form-data">
+			<div class="col-md-7 ">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>User Profile</h4>
+					</div>
+					<div class="panel-body">
+
+						<div class="box box-info">
+
+							<div class="box-body">
+								<div class="col-sm-6">
+									<div align="center">
+										<img alt="User Pic"
+											src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
+											id="profile-image1" class="img-circle img-responsive">
+										<input id="profile-image-upload file-upload" type="file"
+											name="profileImage">
+										<div style="color: #999;">click here to change profile
+											image</div>
+										<!--Upload Image Js And Css-->
+									</div>
+
+									<br>
+
+									<!-- /input-group -->
+								</div>
+								<div class="col-sm-6">
+									<h4 style="color: #00b1b1;">Comment</h4>
+									<span> <textarea rows="" cols=""
+											style="margin: 0px; width: 278px; height: 222px;"
+											name="comment"></textarea>
+									</span>
+								</div>
+								<div class="clearfix"></div>
+								<hr style="margin: 5px 0 5px 0;">
+
+
+								<div class="col-sm-5 col-xs-6 tital ">Member ID :</div>
+								<div class="col-sm-7 col-xs-6 ">
+									<input type="text" name="memberid" required>
+								</div>
+								<div class="clearfix"></div>
+								<div class="bot-border"></div>
+
+								<div class="col-sm-5 col-xs-6 tital ">Password :</div>
+								<div class="col-sm-7 col-xs-6 ">
+									<input type="password" name="password" required>
+								</div>
+								<div class="clearfix"></div>
+								<div class="bot-border"></div>
+
+								<div class="col-sm-5 col-xs-6 tital ">Member Name :</div>
+								<div class="col-sm-7">
+									<input type="text" name="membername" required>
+								</div>
+								<div class="clearfix"></div>
+								<div class="bot-border"></div>
+
+								<!-- /.box-body -->
+							</div>
+							<br> <br> <br>
+							<div class="box-button" align="right">
+								<button type="submit" class="btn btn-info">Save</button>
+								<a href="delete" class="btn btn-danger">Delete</a>
+							</div>
+							<!-- /.box -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
 </body>
 </html>

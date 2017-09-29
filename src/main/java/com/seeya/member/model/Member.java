@@ -13,5 +13,6 @@ public class Member {
 	private String password;
 	private String membername;
 	private String comment;
-	private String profilePic;
+	
+	private String memberPic;
 }

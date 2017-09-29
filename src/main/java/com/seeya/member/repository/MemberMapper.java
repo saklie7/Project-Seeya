@@ -16,11 +16,18 @@ import com.seeya.member.model.Member;
 @Mapper
 public interface MemberMapper {
 
-	@Insert("insert into member values (#{memberid}, #{password}, #{membername})")
+	@Insert("INSERT INTO member(memberid, password, membername) VALUES(#{memberid}, #{password}, #{membername})")
 	public int insert(Member member);
 
 	@Update("update member set password=#{password}, membername=#{membername}, comment=#{comment} where memberid=#{memberid}")
 	public int update(Member member);
+	
+	@Update("UPDATE member SET comment=#{comment} WHERE memberid=#{memberid}")
+	public int updateComment(Member member);
+	
+	@Update("UPDATE member SET member_pic=#{memberPic} WHERE memberid=#{memberid}")
+	public int updateMemberPic(Member member);
+	
 
 	@Delete("delete from member where memberid=#{memberid}")
 	public int delete(String memberid);

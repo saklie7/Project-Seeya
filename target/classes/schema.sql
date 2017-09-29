@@ -6,7 +6,7 @@ create table member(
 	password varchar(100) not null,
 	membername varchar(200) not null,
 	comment varchar(2000) not null default 'Hello~!!',
-	profile_pic varchar(2000) not null default 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg'
+	member_pic varchar(2000) not null default 'https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg'
 );
 
 create table board (
